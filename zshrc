@@ -13,27 +13,29 @@ compinit
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
 
-export TERM=xterm-color
+
+#export TERM=xterm-color
 export CLICOLOR=1
-setopt appendhistory autocd extendedglob notify
+setopt appendhistory extendedglob notify
 unsetopt beep
 bindkey -e
+cdpath=(~/Code ~/Code/api)
+
 # End of lines configured by zsh-newuser-install
 #autoload -U promptinit
 #promptinit
 export EDITOR="vim"
-path=(/Users/ewc/bin /opt/local/bin /opt/local/lib/postgresql84/bin /usr/local/mysql/bin /bin /usr/bin /usr/local/bin /sbin/ /usr/sbin /usr/local/sbin/ /usr/local/pgsql/bin /usr/local/git/bin /usr/X11/bin/ /Users/ewc/Code/incanter/bin /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin/)
+path=(/Users/ewc/bin /opt/local/bin /opt/local/lib/postgresql84/bin /usr/local/mysql/bin /bin /usr/local/bin /usr/bin /sbin/ /usr/sbin /usr/local/sbin/ /usr/local/pgsql/bin /usr/local/git/bin /usr/X11/bin/ /Users/ewc/Code/incanter/bin /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin/ /Users/ewc/bin/android-sdk-mac_x86/tools /Developer/usr/bin)
 export MANPATH="$MANPATH:/usr/local/man:/usr/local/git/man"
-export PIVOTAL_TOKEN="894d7aaa96b175de480fd077c4259af5"
 export PIV_WEB_ID=1807
 export PIV_DASH_ID=6396
-export JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk/
+
 
 alias grep="grep --color=auto"
 #alias ls="ls --color=auto"
@@ -61,10 +63,12 @@ alias y="yaourt --aur"
 #alias gpu='git push'
 #alias gaa='git add .'
 #alias gb='git branch'
+alias gf='git flow'
 
 # rubyee
 alias ruby-ee='/opt/ruby-enterprise/bin/ruby'
 alias vi=vim
+alias mvi=mvim
 
 alias rubyee='/opt/ruby-enterprise/bin/ruby'
 alias gemee='/opt/ruby-enterprise/bin/gem'
@@ -74,8 +78,6 @@ alias merbee='/opt/ruby-enterprise/bin/ruby ./bin/merb -a thin'
 # ruby19
 alias ruby19='/opt/ruby1.9/bin/ruby'
 
-#pg84
-alias psql=psql84
 
 # Pivotal webservice stuff
 function pc {
@@ -122,11 +124,7 @@ export GOARCH="amd64"
 
 export API_WORKSPACE=code/svn
 
-#git theming default: Variables for theming the git info prompt
-ZSH_THEME_GIT_PROMPT_PREFIX="git:("         # Prefix at the very beginning of the prompt, before the branch name
-ZSH_THEME_GIT_PROMPT_SUFFIX=")"             # At the very end of the prompt
-ZSH_THEME_GIT_PROMPT_DIRTY="*"              # Text to display if the branch is dirty
-ZSH_THEME_GIT_PROMPT_CLEAN=""               # Text to display if the branch is clean
+export NODE_PATH=/usr/local/lib/node_modules
 
 # Setup the prompt with pretty colors
 setopt prompt_subst
@@ -135,16 +133,22 @@ setopt prompt_subst
 
 # get the name of the branch we are on
 function git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+#  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  GST=$( git status 2>/dev/null|tail -n1 )
+  if [[ $GST != "nothing to commit (working directory clean)" ]]; then
+    GP="$ZSH_THEME_GIT_PROMPT_DIRTY"
+  else
+    GP="$ZSH_THEME_GIT_PROMPT_CLEAN"
+  fi
+  if [[ $GST == "" ]] ; then
+    echo -n ""
+  else
+    echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(current_branch)$GP$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  fi
 }
 
 parse_git_dirty () {
-  if [[ $((git status 2> /dev/null) | tail -n1) != "nothing to commit (working directory clean)" ]]; then
-    echo "$ZSH_THEME_GIT_PROMPT_DIRTY"
-  else
-    echo "$ZSH_THEME_GIT_PROMPT_CLEAN"
-  fi
+  GST=$( git status 2>/dev/null|tail -n1 )
 }
 
 #
@@ -172,9 +176,27 @@ alias gba='git branch -a'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 
+#if [ "`uname`" = "Darwin" ]; then
+#  compctl -f -x 'p[2]' -s "`/bin/ls -d1 /Applications/*/*.app /Applications/*.app | sed 's|^.*/\([^/]*\)\.app.*|\\1|;s/ /\\\\ /g'`" -- open
+#  alias run='open -a'
+#fi
+
+export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
 
 
 source "/Users/ewc/.zsh/themes/clean.zsh-theme"
 
+
+
+function epoch() {
+  ruby -e "puts Time.at($*)"
+}
+
+function servethis() {
+  python -m SimpleHTTPServer $*
+}
+
+
 if [[ -s /Users/ewc/.rvm/scripts/rvm ]] ; then source /Users/ewc/.rvm/scripts/rvm ; fi
 
+source /Users/ewc/Dropbox/private.zsh
