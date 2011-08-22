@@ -1,0 +1,73 @@
+ControlMaster auto
+ControlPath /tmp/ssh_mux_%h_%p_%r
+
+GSSAPIAuthentication no
+
+Host git.dev.api.local git git.dev
+  HostName 192.168.3.172
+  User git
+
+Host d
+  HostName 192.168.1.175
+
+Host qapp06-*
+  User ubuntu
+
+Host ssint2-*
+  User ubuntu
+
+Host host-*
+  User ubuntu
+
+Host stage-*
+  User ubuntu
+
+Host peer1-*
+  User ubuntu
+
+Host ops-*
+  User ubuntu
+
+Host qa-ssdp02*
+  User root
+  ForwardAgent yes
+
+Host crawl.akrasiac.org
+  User joshua
+
+Host crawl.develz.org
+  User crawl
+  IdentityFile ~/.ssh/cao_key.txt
+
+Host mm
+  User ubuntu
+  IdentityFile ~/.ssh/id_mm
+
+Host buttermilk aspen
+  User ubuntu
+  IdentityFile ~/.ssh/id_mm
+
+Host dep-mm
+  User deploy
+
+Host mm-ey
+  User deploy
+
+Host vagrant
+  HostName localhost
+  User vagrant
+  Port 22150
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/ewc/.rvm/gems/ree-1.8.7-2010.02/gems/vagrant-0.6.7/keys/vagrant
+  IdentitiesOnly yes
+
+Host r
+  User root
+
+Host ci2
+  Hostname ec2-174-129-113-237.compute-1.amazonaws.com
+  User ubuntu
+  IdentityFile ~/.ssh/id_ssbe
+  UserKnownHostsFile /dev/null
