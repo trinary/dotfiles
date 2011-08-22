@@ -1,0 +1,6 @@
+user=absperf
+key=c896864e76ecb169849018caf4202688
+
+function rcurl {
+curl -H "X-Auth-User: $user" -H "X-Auth-Key: $key" -v $@
+}
