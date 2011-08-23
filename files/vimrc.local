@@ -1,0 +1,51 @@
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+
+set encoding=utf-8
+set scrolloff=3
+set autoindent
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+set relativenumber
+set noundofile
+set wrap
+
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
+
+" Make Arrow Keys Useful Again
+map <down> <ESC>:bn<RETURN>
+map <left> <ESC>:NERDTreeToggle<RETURN>
+" map <right> <ESC>:Tlist<RETURN>
+map <up> <ESC>:bp<RETURN>
+
+" Removes trailing spaces
+function TrimWhiteSpace()
+  %s/\s*$//
+  ''
+:endfunction
+
+set list listchars=tab:\ \ ,trail:·,extends:>,precedes:<
+autocmd FileWritePre * :call TrimWhiteSpace()
+autocmd FileAppendPre * :call TrimWhiteSpace()
+autocmd FilterWritePre * :call TrimWhiteSpace()
+autocmd BufWritePre * :call TrimWhiteSpace()
+
+map <F2> :call TrimWhiteSpace()<CR>
+map! <F2> :call TrimWhiteSpace()<CR>
+
+let g:github_user = 'trinary'
+let g:github_token = '30679f558136f61d4f9694b79b80bc4c'
+
