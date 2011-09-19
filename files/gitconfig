@@ -20,9 +20,9 @@
   pl = pull
   ps = push
   plre = pull --rebase
-  st = status
+  st = status -sb
   out = log origin..HEAD
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an, %cr)%Creset' --abbrev-commit --date=relative
 	unstage = reset HEAD --
 [push]
 	default = matching
