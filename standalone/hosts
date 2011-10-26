@@ -187,3 +187,54 @@
 #fe80::1%lo0	localhost
 #
 
+=======
+#
+# /etc/hosts: static lookup table for host names
+#
+
+#<ip-address>	<hostname.domain.org>	<hostname>
+172.17.10.18 config.ssbe06.qwest.sysshep.com core.ssbe06.qwest.sysshep.com
+127.0.0.1		localhost.localdomain	localhost megatron ssbe.localhost assets.ssbe.localhost core.ssbe.localhost alarm.ssbe.localhost config.ssbe.localhost configurator.ssbe.localhost cookietest.localhost core.cookietest.localhost alarm.cookietest.localhost config.cookietest.localhost
+172.18.0.91		demo	v5.demo.sysshep.com 	v5.demo 	v5.demo.den.api.local
+192.168.3.129		configurator.vm3-dev-paul.dev.api.local
+209.20.77.28    au
+173.8.246.84 	gw
+172.16.201.23 	qa-ssdp01-proc03 qa-ssdp01-proc03.boulder.api.local
+209.20.77.28    foo.test
+
+172.18.0.131    ops.sysshep.com core.ops.sysshep.com alarm.ops.sysshep.com config.ops.sysshep.com assets.ops.sysshep.com
+
+172.17.32.131 	staging-proc01
+172.17.32.132 	staging-proc02
+172.17.32.111 	staging-db01
+
+216.25.10.109 	poller
+
+172.17.32.31 	peer1-proc01
+172.17.32.32 	peer1-proc02
+172.17.32.33 	peer1-proc03
+172.17.32.34 	peer1-proc04
+
+172.17.32.11 	peer1-db01
+172.17.32.12 	peer1-db02
+
+172.17.32.21 	peer1-mq01
+172.17.32.22 	peer1-mq02
+
+66.35.33.227 	config.ssbe.fortrustllc.com
+
+172.18.0.13 	ss-internal2 ssint2-db01
+172.18.0.15 	ssint2-proc01
+172.18.0.16 	ssint2-proc02
+
+172.18.0.34     ss-internal2.den.sysshep.com core.ss-internal2.den.sysshep.com alarm.ss-internal2.den.sysshep.com config.ss-internal2.den.sysshep.com
+
+192.168.1.123 	self.apollo
+
+172.16.200.57   posthausxi.virtela.cc
+
+#192.168.1.1 	router
+
+
+# 64.226.221.130 		config.dev.peer1.sysshep.com
+# End of file

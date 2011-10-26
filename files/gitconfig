@@ -11,7 +11,7 @@
 	status = auto
 	branch = auto
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/ewc/.gitignore_global
 [alias]
   c = commit -m
   a = add
@@ -23,7 +23,7 @@
   st = status -sb
   out = log origin..HEAD
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an, %cr)%Creset' --abbrev-commit --date=relative
-	unstage = reset HEAD --
+  unstage = reset HEAD --
 [push]
 	default = matching
 [user]
@@ -31,4 +31,10 @@
 	email = ewc@absolute-performance.com
 [github]
 	user = trinary
-	token = 30679f558136f61d4f9694b79b80bc4c
+	token = b9a6388c1a85eb7b85cf38dc0dd0f1b4
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

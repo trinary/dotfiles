@@ -182,4 +182,6 @@ function servethis() {
 eval "$(rbenv init -)"
 
 source /Users/ewc/Dropbox/private.zsh
+
+eval "$(rbenv init -)"
 set +x

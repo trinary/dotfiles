@@ -27,6 +27,15 @@ Host peer1-*
 
 Host ops-*
   User ubuntu
+Host ops-proc01
+  Hostname 172.18.0.131
+
+Host ops-db01
+  Hostname 172.18.0.121
+
+Host r
+  Hostname 192.168.199.1
+  User root
 
 Host qa-ssdp02*
   User root
