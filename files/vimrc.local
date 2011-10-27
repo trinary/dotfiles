@@ -23,7 +23,7 @@ set wrap
 
 let g:solarized_termcolors=256
 set background=dark
-colorscheme solarized
+colorscheme slate
 
 " Make Arrow Keys Useful Again
 map <down> <ESC>:bn<RETURN>
