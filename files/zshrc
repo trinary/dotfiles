@@ -89,7 +89,13 @@ bindkey '^o' push-line-or-edit
 #  [[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
 #}
 #
-#precmd_functions+=(vcsinfo_precmd)
+#
+bell=`tput bel`
+function iterm() {
+echo -n "\033]1;$USERNAME@$HOST$bell\033]2;$PWD> - $USERNAME@$HOST ($status)$bell"
+}
+
+precmd_functions+=(iterm)
 source ~/.zsh/func/ssbe-zsh/ssbe-web.zsh
 
 #export PS1="%n@%m %F{cyan}%1~%f %(1v.%F{green}%1v%f.) %# "
@@ -183,5 +189,4 @@ eval "$(rbenv init -)"
 
 source /Users/ewc/Dropbox/private.zsh
 
-eval "$(rbenv init -)"
 set +x
