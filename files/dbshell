@@ -1,2 +1,0 @@
-db.createCollection("boards");
-["random", "stock", "collectd_df", "collectd_load", "collectd_interface", "collectd_memory"].forEach(function(type) {
