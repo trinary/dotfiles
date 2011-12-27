@@ -5,7 +5,7 @@ cd files
 for i in * ; do
   date=`date +%s`
   if [[ ! -h ~/.$i ]]; then
-    mkdir ~/tmp/dotfiles-$date
+    mkdir -p ~/tmp/dotfiles-$date
     cp ~/.$i ~/tmp/dotfiles-$date/
   fi
 
