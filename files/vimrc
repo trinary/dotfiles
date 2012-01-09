@@ -5,8 +5,10 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'rails.vim'
-Bundle 'https://github.com/wincent/Command-T.git'
 Bundle 'vim-coffee-script'
+Bundle 'ctrlp'
+
+filetype plugin indent on
 
 set number
 set ruler
