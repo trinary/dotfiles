@@ -76,7 +76,7 @@ Host r
   User root
 
 Host ci2
-  Hostname ec2-107-20-96-21.compute-1.amazonaws.com
+  Hostname ec2-50-17-94-132.compute-1.amazonaws.com
   User ubuntu
   IdentityFile ~/.ssh/id_ssbe
   UserKnownHostsFile /dev/null
