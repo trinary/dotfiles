@@ -27,8 +27,6 @@ colorscheme solarized
 
 " Make Arrow Keys Useful Again
 map <down> <ESC>:bn<RETURN>
-map <left> <ESC>:NERDTreeToggle<RETURN>
-" map <right> <ESC>:Tlist<RETURN>
 map <up> <ESC>:bp<RETURN>
 
 " Removes trailing spaces

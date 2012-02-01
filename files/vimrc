@@ -1,18 +1,24 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-Bundle 'gmarik/vundle'
 
-Bundle 'rails.vim'
-Bundle 'vim-coffee-script'
-Bundle 'ctrlp'
+call pathogen#infect()
+
+
+"set rtp+=~/.vim/bundle/vundle
+"call vundle#rc()
+"Bundle 'gmarik/vundle'
+"
+"Bundle 'rails.vim'
+"Bundle 'vim-coffee-script'
+"Bundle 'ctrlp'
 
 filetype plugin indent on
 
 set number
 set ruler
 syntax on
+
+let g:Powerline_symbols = 'fancy'
 
 " Set encoding
 set encoding=utf-8
@@ -61,9 +67,14 @@ colorscheme solarized
 
 " Make Arrow Keys Useful Again
 map <down> <ESC>:bn<RETURN>
-map <left> <ESC>:NERDTreeToggle<RETURN>
-" map <right> <ESC>:Tlist<RETURN>
+map <right> <ESC>:TagbarToggle<RETURN>
+map <left> <ESC>:GundoToggle<RETURN>
 map <up> <ESC>:bp<RETURN>
+
+imap <C-h> <C-w> h
+imap <C-j> <C-w> j
+imap <C-k> <C-w> k
+imap <C-l> <C-w> l
 
 " Removes trailing spaces
 function TrimWhiteSpace()
@@ -86,7 +97,7 @@ let g:github_token = '30679f558136f61d4f9694b79b80bc4c'
 
 if has ("gui_mac" ) || has("gui_macvim")
   set guioptions-=T
-  set gfn=Menlo:h14
+  set gfn=Menlo\ for\ Powerline:h14
   " Fullscreen takes up entire screen
   set fuoptions=maxhorz,maxvert
 
