@@ -25,7 +25,7 @@ zle -N self-insert url-quote-magic
 
 #export TERM=xterm-color
 export CLICOLOR=1
-setopt appendhistory extendedglob notify nohashdirs nohashcmds
+setopt appendhistory extendedglob notify
 unsetopt beep
 bindkey -e
 cdpath=(~/Code ~/Code/api)
