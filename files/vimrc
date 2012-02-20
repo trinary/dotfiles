@@ -65,6 +65,9 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
+" don't clobber buffer if used in term
+set t_ti= t_te=
+
 " Make Arrow Keys Useful Again
 map <down> <ESC>:bn<RETURN>
 map <right> <ESC>:TagbarToggle<RETURN>
