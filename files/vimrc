@@ -82,6 +82,7 @@ function TrimWhiteSpace()
   ''
 :endfunction
 
+au BufNewFile,BufRead *.less set filetype=css
 
 set list listchars=tab:\ \ ,trail:·,extends:>,precedes:<
 "autocmd FileWritePre * :call TrimWhiteSpace()
