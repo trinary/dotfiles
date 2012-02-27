@@ -1,4 +1,4 @@
---type-add=coffeescript=.coffee
---type-add=less=.less
---type-add=scss=.scss
+--type-set=coffeescript=.coffee
+--type-set=less=.less
+--type-set=scss=.scss
 
