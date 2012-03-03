@@ -51,8 +51,6 @@ alias gf='git flow'
 
 # rubyee
 alias ruby-ee='/opt/ruby-enterprise/bin/ruby'
-alias vi=mvim
-alias vim=mvim
 alias mvi=mvim
 
 alias rubyee='/opt/ruby-enterprise/bin/ruby'
@@ -183,6 +181,7 @@ function servethis() {
   python -m SimpleHTTPServer $*
 }
 
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 #if [[ -s /Users/ewc/.rvm/scripts/rvm ]] ; then source /Users/ewc/.rvm/scripts/rvm ; fi
 #
