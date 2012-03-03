@@ -1,0 +1,16 @@
+# ~/.tmuxinator/core.yml
+# you can make as many tabs as you wish...
+
+project_name: analytics
+project_root: ~/Code/analytics
+tabs:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - #empty, will just run plain bash
+        - tail -f log/development.log
+  - shell: git pull
+  - database: rails db
+  - server: rails s
+  - console: rails c
