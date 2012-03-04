@@ -1,0 +1,16 @@
+# ~/.tmuxinator/tax.yml
+# you can make as many tabs as you wish...
+
+project_name: tax
+project_root: ~/code/skorekards
+tabs:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - #empty, will just run plain bash
+        - rails s
+        - tail -f logs/development.log
+        - rails c
+  - shell: git pull
+  - database: rails db
