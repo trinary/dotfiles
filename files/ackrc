@@ -1,4 +1,5 @@
 --type-set=coffeescript=.coffee
 --type-set=less=.less
 --type-set=scss=.scss
+--type-set=jbuilder=.jbuilder
 

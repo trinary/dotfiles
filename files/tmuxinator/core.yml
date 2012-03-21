@@ -10,7 +10,14 @@ tabs:
         - vim
         - #empty, will just run plain bash
         - tail -f log/development.log
-  - shell: git pull
+  - shell:
+    layout: tiled
+    panes:
+      -
+      -
+      -
+      -
+      -
   - database: rails db
   - server: rails s
   - console: rails c
