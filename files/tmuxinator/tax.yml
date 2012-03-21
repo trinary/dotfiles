@@ -9,9 +9,8 @@ tabs:
       panes:
         - vim
         - #empty, will just run plain bash
-        - top
+        - rails s
+        - tail -f logs/development.log
+        - rails c
   - shell: git pull
   - database: rails db
-  - server: rails s
-  - logs: tail -f log/development.log
-  - console: rails c
