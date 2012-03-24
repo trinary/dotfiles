@@ -1,0 +1,15 @@
+# ~/.tmuxinator/tiled.yml
+# you can make as many tabs as you wish...
+
+project_name: Tiled
+project_root: ~/
+tabs:
+  - editor:
+      layout: tiled
+      panes:
+        - #empty, will just run plain bash
+        - #empty, will just run plain bash
+        - #empty, will just run plain bash
+        - #empty, will just run plain bash
+        - #empty, will just run plain bash
+        - #empty, will just run plain bash
