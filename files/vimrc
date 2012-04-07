@@ -3,15 +3,6 @@ filetype off
 
 call pathogen#infect()
 
-
-"set rtp+=~/.vim/bundle/vundle
-"call vundle#rc()
-"Bundle 'gmarik/vundle'
-"
-"Bundle 'rails.vim'
-"Bundle 'vim-coffee-script'
-"Bundle 'ctrlp'
-
 filetype plugin indent on
 
 set number
