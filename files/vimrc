@@ -11,6 +11,8 @@ syntax on
 
 let g:Powerline_symbols = 'fancy'
 
+let g:slime_target = "tmux"
+
 " Set encoding
 set encoding=utf-8
 
@@ -88,9 +90,6 @@ set list listchars=tab:\ \ ,trail:·,extends:>,precedes:<
 
 map <F2> :call TrimWhiteSpace()<CR>
 map! <F2> :call TrimWhiteSpace()<CR>
-
-let g:github_user = 'trinary'
-let g:github_token = '30679f558136f61d4f9694b79b80bc4c'
 
 if has ("gui_mac" ) || has("gui_macvim")
   set guioptions-=T
