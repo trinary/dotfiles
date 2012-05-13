@@ -2,7 +2,7 @@
 # you can make as many tabs as you wish...
 
 project_name: tax
-project_root: ~/code/skorekards
+project_root: ~/code/ustaxreview.org
 tabs:
   - editor:
       layout: main-vertical
@@ -10,7 +10,7 @@ tabs:
         - vim
         - #empty, will just run plain bash
         - rails s
-        - tail -f logs/development.log
+        - tail -f log/development.log
         - rails c
   - shell: git pull
   - database: rails db
