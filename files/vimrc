@@ -5,6 +5,7 @@ call pathogen#infect()
 
 filetype plugin indent on
 
+set t_Co=256
 set number
 set ruler
 syntax on
@@ -56,9 +57,9 @@ set noundofile
 set wrap
 set directory=~/.vim/tmp/
 
+
 let g:solarized_termcolors=256
-set background=dark
-colorscheme solarized
+colorscheme Tomorrow-Night
 
 " don't clobber buffer if used in term
 set t_ti= t_te=
@@ -81,6 +82,8 @@ function TrimWhiteSpace()
 :endfunction
 
 au BufNewFile,BufRead *.less set filetype=css
+au! BufRead,BufNewFile *.json set filetype=json 
+
 
 set list listchars=tab:\ \ ,trail:·,extends:>,precedes:<
 "autocmd FileWritePre * :call TrimWhiteSpace()
@@ -91,17 +94,4 @@ set list listchars=tab:\ \ ,trail:·,extends:>,precedes:<
 map <F2> :call TrimWhiteSpace()<CR>
 map! <F2> :call TrimWhiteSpace()<CR>
 
-if has ("gui_mac" ) || has("gui_macvim")
-  set guioptions-=T
-  set gfn=Menlo\ for\ Powerline:h14
-  " Fullscreen takes up entire screen
-  set fuoptions=maxhorz,maxvert
-
-  " Command-T for CommandT
-  macmenu &File.New\ Tab key=<Nop>
-  map <D-t> :CommandT<CR>
-  imap <D-t> <Esc>:CommandT<CR>
-
-  " Command-Return for fullscreen
-  macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
-endif
+set background=dark
