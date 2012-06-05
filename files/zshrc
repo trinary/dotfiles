@@ -1,5 +1,4 @@
 # The following lines were added by compinstall
-set -x
 autoload -Uz vcs_info
 typeset -U fpath path
 fpath=($fpath $HOME/.zsh/func)
