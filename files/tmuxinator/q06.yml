@@ -1,0 +1,15 @@
+# ~/.tmuxinator/ssint2.yml
+# you can make as many tabs as you wish...
+
+project_name: ss-internal2
+project_root: ~/
+tabs:
+  - procs:
+      layout: tiled
+      panes:
+        - ssh qapp06-proc01
+        - ssh qapp06-proc02
+        - ssh qapp06-dbq02
+        - ssh qapp06-dbq03
+
+

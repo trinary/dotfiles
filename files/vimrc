@@ -7,12 +7,27 @@ filetype plugin indent on
 
 set t_Co=256
 set number
-set ruler
 syntax on
 
-let g:Powerline_symbols = 'fancy'
+set hidden
+let mapleader=","
+set history=1000
 
+runtime macros/matchit.vim
+
+set wildmenu
+set wildmode=list:longest
+
+set title
+set scrolloff=3
+
+let g:Powerline_symbols = 'fancy'
 let g:slime_target = "tmux"
+
+let vimclojure#HighlightBuiltins=1
+let vimclojure#ParenRainbow=1
+let vimclojure#WantNailgun = 1
+let vimclojure#NailgunClient = "/usr/local/bin/ng"
 
 " Set encoding
 set encoding=utf-8
@@ -56,6 +71,9 @@ set laststatus=2
 set noundofile
 set wrap
 set directory=~/.vim/tmp/
+set backupdir=~/.vim/tmp
+set shortmess=atI
+
 
 
 let g:solarized_termcolors=256
@@ -82,7 +100,7 @@ function TrimWhiteSpace()
 :endfunction
 
 au BufNewFile,BufRead *.less set filetype=css
-au! BufRead,BufNewFile *.json set filetype=json 
+au! BufRead,BufNewFile *.json set filetype=json
 
 
 set list listchars=tab:\ \ ,trail:·,extends:>,precedes:<
