@@ -1,9 +1,12 @@
 # The following lines were added by compinstall
-autoload -Uz vcs_info
 typeset -U fpath path
 fpath=($fpath $HOME/.zsh/func)
 
-#zstyle ':completion:*' completer _expand _complete
+
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+zstyle ':completion:*' completer _expand _complete
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
 zstyle :compinstall filename '~/.zshrc'
@@ -16,8 +19,8 @@ compinit
 setopt prompt_subst
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000
+SAVEHIST=1000
 
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
@@ -25,16 +28,16 @@ zle -N self-insert url-quote-magic
 
 #export TERM=xterm-color
 export CLICOLOR=1
-setopt appendhistory extendedglob notify
+#setopt appendhistory extendedglob notify
 unsetopt beep
 bindkey -e
 cdpath=(~/Code ~/Code/api)
 
 # End of lines configured by zsh-newuser-install
-#autoload -U promptinit
-#promptinit
+autoload -U promptinit
+promptinit
 export EDITOR="vim"
-path=( $HOME/.rbenv/bin /Users/ewc/bin /opt/local/bin /opt/local/lib/postgresql84/bin /usr/local/mysql/bin /bin /usr/local/bin /usr/bin /sbin /usr/sbin /usr/local/sbin /usr/local/pgsql/bin /usr/local/git/bin /usr/X11/bin /Users/ewc/Code/incanter/bin /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin /Users/ewc/bin/android-sdk-mac_x86/tools /Developer/usr/bin)
+path=( $HOME/.rbenv/bin /Users/ewc/.rbenv/shims /Users/ewc/bin /opt/local/bin /opt/local/lib/postgresql84/bin /usr/local/mysql/bin /bin /usr/local/bin /usr/bin /sbin /usr/sbin /usr/local/sbin /usr/local/pgsql/bin /usr/local/git/bin /usr/X11/bin /Users/ewc/Code/incanter/bin /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin /Users/ewc/bin/android-sdk-mac_x86/tools /Developer/usr/bin)
 export MANPATH="$MANPATH:/usr/local/man:/usr/local/git/man"
 export PIV_WEB_ID=1807
 export PIV_DASH_ID=6396
@@ -43,23 +46,9 @@ export LESS="-erX"
 
 
 alias grep="grep --color=auto"
-
 alias scr='vim ~/util/scratch'
 alias pscr='vim ~/util/scratch +1 -c ":r!xclip -o";cat ~/util/scratch |xclip -i'
-
 alias gf='git flow'
-
-# rubyee
-alias ruby-ee='/opt/ruby-enterprise/bin/ruby'
-alias mvi=mvim
-
-alias rubyee='/opt/ruby-enterprise/bin/ruby'
-alias gemee='/opt/ruby-enterprise/bin/gem'
-alias rakeee='/opt/ruby-enterprise/bin/rake'
-alias merbee='/opt/ruby-enterprise/bin/ruby ./bin/merb -a thin'
-
-# ruby19
-alias ruby19='/opt/ruby1.9/bin/ruby'
 
 
 # Pivotal webservice stuff
@@ -82,18 +71,8 @@ function calc {
   awk "BEGIN{ print $* }"
 }
 
-
-
 bindkey '^o' push-line-or-edit
 
-#zstyle ':vcs_info:*' formats '%r/%b'
-#function vcsinfo_precmd() {
-#  psvar=()
-#  vcs_info
-#  [[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
-#}
-#
-#
 bell=`tput bel`
 function iterm() {
 echo -n "\033]1;$USERNAME@$HOST$bell\033]2;$PWD> - $USERNAME@$HOST ($status)$bell"
@@ -165,11 +144,6 @@ alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 alias be='bundle exec'
 
-#if [ "`uname`" = "Darwin" ]; then
-#  compctl -f -x 'p[2]' -s "`/bin/ls -d1 /Applications/*/*.app /Applications/*.app | sed 's|^.*/\([^/]*\)\.app.*|\\1|;s/ /\\\\ /g'`" -- open
-#  alias run='open -a'
-#fi
-
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
 
 
@@ -183,10 +157,25 @@ function servethis() {
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-#if [[ -s /Users/ewc/.rvm/scripts/rvm ]] ; then source /Users/ewc/.rvm/scripts/rvm ; fi
-#
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
+# instead of that ^
+# just do this
+
+source /Users/ewc/.rbenv/completions/rbenv.zsh
+
+rbenv() {
+  local command="$1"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+    shell)
+      eval `rbenv "sh-$command" "$@"`;;
+    *)
+      command rbenv "$command" "$@";;
+  esac
+}
+
 
 source /Users/ewc/Dropbox/private.zsh
-
-set +x
