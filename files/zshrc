@@ -151,6 +151,10 @@ function epoch() {
   ruby -e "puts Time.at($*)"
 }
 
+funtion taxdeploy() {
+  git checkout master && git merge edge && git push && git push heroku master && git checkout edge
+}
+
 function servethis() {
   python -m SimpleHTTPServer $*
 }
