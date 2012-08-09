@@ -76,8 +76,6 @@ set directory=~/.vim/tmp/
 set backupdir=~/.vim/tmp
 set shortmess=atI
 
-
-
 let g:solarized_termcolors=256
 colorscheme Tomorrow-Night
 
