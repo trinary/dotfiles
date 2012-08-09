@@ -1,0 +1,31 @@
+# ~/.tmuxinator/ssint2.yml
+# you can make as many tabs as you wish...
+
+project_name: peer1
+project_root: ~/
+tabs:
+  - procs:
+      layout: tiled
+      panes:
+        - ssh peer1-proc01
+        - ssh peer1-proc02
+        - ssh peer1-proc03
+        - ssh peer1-proc04
+        - ssh peer1-proc05
+        - ssh peer1-proc06
+  - dashes:
+      layout: tiled
+      panes:
+        - ssh peer1-dash01
+        - ssh peer1-dash02
+  - mqs:
+      layout: tiled
+      panes:
+        - ssh peer1-mq01
+        - ssh peer1-mq02
+        - ssh peer1-qa02
+  - dbs:
+      layout: tiled
+      panes:
+        - ssh peer1-db01
+        - ssh peer2-db02

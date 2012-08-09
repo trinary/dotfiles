@@ -1,0 +1,12 @@
+project_name: host
+project_root: ~/
+tabs:
+  - procs:
+      layout: tiled
+      panes:
+        - ssh host-pn01
+        - ssh host-pn02
+        - ssh host-db01
+        - ssh host-db02
+
+
