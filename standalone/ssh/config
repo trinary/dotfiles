@@ -28,6 +28,8 @@ Host peer1-*
 Host ops-*
   User ubuntu
 
+Host aj-*
+  User ubuntu
 Host r
   Hostname 192.168.199.1
   User root
