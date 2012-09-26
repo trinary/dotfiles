@@ -13,6 +13,8 @@ set hidden
 let mapleader=","
 set history=1000
 
+set updatetime=0
+
 runtime macros/matchit.vim
 
 set wildmenu
