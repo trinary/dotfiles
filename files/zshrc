@@ -181,5 +181,6 @@ rbenv() {
   esac
 }
 
+source /Users/ewc/Code/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source /Users/ewc/Dropbox/private.zsh

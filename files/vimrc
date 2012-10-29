@@ -23,9 +23,11 @@ set wildmode=list:longest
 set title
 set scrolloff=3
 
+" PowerLine
 let g:Powerline_symbols = 'fancy'
+" Slime
 let g:slime_target = "tmux"
-
+" vimclojure
 let vimclojure#HighlightBuiltins=1
 let vimclojure#ParenRainbow=1
 let vimclojure#WantNailgun = 1
@@ -39,6 +41,10 @@ let vimclojure#DynamicHighlighting=1
 let vimclojure#ParenRainbow=1
 let vimclojure#WantNailgun = 1
 let vimclojure#NailgunClient = "/usr/local/bin/ng"
+
+" ctrlp
+let g:ctrlp_open_new_file = 't'
+let g:ctrlp_open_multi = '1t'
 
 " Set encoding
 set encoding=utf-8
