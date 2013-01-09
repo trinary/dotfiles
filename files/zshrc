@@ -31,13 +31,12 @@ export CLICOLOR=1
 #setopt appendhistory extendedglob notify
 unsetopt beep
 bindkey -e
-cdpath=(~/Code ~/Code/api)
+cdpath=(~/Code ~/Code/api ~/Code/ssbe)
 
 # End of lines configured by zsh-newuser-install
 autoload -U promptinit
 promptinit
 export EDITOR="vim"
-set -o vi
 path=( $HOME/.rbenv/bin /Users/ewc/.rbenv/shims /Users/ewc/bin /usr/local/share/npm/bin/ opt/local/bin /opt/local/lib/postgresql84/bin /usr/local/mysql/bin /usr/local/bin /bin /usr/bin /sbin /usr/sbin /usr/local/sbin /usr/local/pgsql/bin /usr/local/git/bin /usr/X11/bin /Users/ewc/Code/incanter/bin /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin /Users/ewc/bin/android-sdk-mac_x86/tools /Developer/usr/bin /Users/ewc/Code/crawl/crawl-ref/source )
 export MANPATH="$MANPATH:/usr/local/man:/usr/local/git/man"
 export PIV_WEB_ID=1807
@@ -145,8 +144,6 @@ alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 alias be='bundle exec'
 
-export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Home"
-
 
 function epoch() {
   ruby -e "puts Time.at($*)"
@@ -158,6 +155,10 @@ funtion taxdeploy() {
 
 function servethis() {
   python -m SimpleHTTPServer $*
+}
+
+function h() {
+  http --json --pretty all --auth 'dev:dtdmnpp!!' $*
 }
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
