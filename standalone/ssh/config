@@ -25,7 +25,7 @@ Host stage-*
 Host peer1-*
   User ubuntu
 
-Host ops-*
+Host ops-proc01 ops-proc02 ops-db01
   User ubuntu
 
 Host aj-*

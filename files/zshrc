@@ -145,6 +145,8 @@ alias gcp='git cherry-pick'
 alias be='bundle exec'
 
 
+alias vi=vim
+
 function epoch() {
   ruby -e "puts Time.at($*)"
 }

@@ -47,6 +47,12 @@ let vimclojure#NailgunClient = "/usr/local/bin/ng"
 let g:ctrlp_open_new_file = 't'
 let g:ctrlp_open_multi = '1t'
 
+" sysshep.vim
+"  set your systemshepherd username and password
+" Let's read this from something I don't check in :)
+source /Users/ewc/Dropbox/private.vim
+"  set a keymapping to call the plugin
+nnoremap SS :SysShepURLRequest<CR>
 " Set encoding
 set encoding=utf-8
 
@@ -112,11 +118,25 @@ imap <C-j> <C-w> j
 imap <C-k> <C-w> k
 imap <C-l> <C-w> l
 
+nnoremap :  q:i
+xnoremap :  q:i
+nnoremap /  q/i
+xnoremap /  q/i
+nnoremap ?  q?i
+xnoremap ?  q?i
+nnoremap q: :
+xnoremap q: :
+nnoremap q/ /
+xnoremap q/ /
+nnoremap q? ?
+xnoremap q? ?
+autocmd CmdwinEnter * nnoremap <buffer> <ESC> :q<CR>
+
 " Removes trailing spaces
 function TrimWhiteSpace()
   %s/\s*$//
   ''
-:endfunction
+endfunction
 
 au BufNewFile,BufRead *.less set filetype=css
 au! BufRead,BufNewFile *.json set filetype=json
