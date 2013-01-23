@@ -22,6 +22,7 @@ set wildmode=list:longest
 
 set title
 set scrolloff=3
+set clipboard=unnamed
 
 " PowerLine
 let g:Powerline_symbols = 'fancy'
