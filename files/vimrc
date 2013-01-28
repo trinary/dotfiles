@@ -118,8 +118,6 @@ imap <C-j> <C-w> j
 imap <C-k> <C-w> k
 imap <C-l> <C-w> l
 
-nnoremap :  q:i
-xnoremap :  q:i
 nnoremap /  q/i
 xnoremap /  q/i
 nnoremap ?  q?i
