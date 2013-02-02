@@ -7,6 +7,7 @@
   mergeoptions = --no-ff
 # DO NOT EDIT BELOW THIS LINE
 [color]
+  ui = true
 	diff = auto
 	status = auto
 	branch = auto

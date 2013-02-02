@@ -25,7 +25,7 @@ Host stage-*
 Host peer1-*
   User ubuntu
 
-Host ops-*
+Host ops-proc01 ops-proc02 ops-db01
   User ubuntu
 
 Host aj-*
@@ -33,6 +33,9 @@ Host aj-*
 Host r
   Hostname 192.168.199.1
   User root
+
+Host sdm-*
+  User ubuntu
 
 Host qa-ssdp02*
   User root
@@ -83,9 +86,3 @@ Host ci
 
 Host lci
   User ubuntu
-
-Host ci1
-  Hostname ec2-184-73-215-118.compute-1.amazonaws.com
-  User root
-  IdentityFile ~/.ssh/id_ssbe
-  UserKnownHostsFile /dev/null
