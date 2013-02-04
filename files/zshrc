@@ -42,6 +42,7 @@ export MANPATH="$MANPATH:/usr/local/man:/usr/local/git/man"
 export PIV_WEB_ID=1807
 export PIV_DASH_ID=6396
 export LESS="-erX"
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 
 
