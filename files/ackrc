@@ -3,5 +3,4 @@
 --type-set=scss=.scss
 --type-set=jbuilder=.jbuilder
 --type-set=haml=.haml
---type-set=index=dsc_index.xml
---noindex
+--ignore-file=match:/^dsc_index.xml$/
