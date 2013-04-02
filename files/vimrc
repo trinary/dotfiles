@@ -130,6 +130,8 @@ nnoremap q? ?
 xnoremap q? ?
 autocmd CmdwinEnter * nnoremap <buffer> <ESC> :q<CR>
 
+inoremap <C-C> #<C-R>=system('/Users/ewc/bin/color_picker')<CR>
+
 " Removes trailing spaces
 function TrimWhiteSpace()
   %s/\s*$//

@@ -1,6 +1,0 @@
---type-set=coffeescript=.coffee
---type-set=less=.less
---type-set=scss=.scss
---type-set=jbuilder=.jbuilder
---type-set=haml=.haml
---ignore-file=match:/^dsc_index.xml$/

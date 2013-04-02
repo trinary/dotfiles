@@ -46,8 +46,6 @@ export PIV_DASH_ID=6396
 export LESS="-erX"
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-
-
 alias grep="grep --color=auto"
 alias scr='vim ~/util/scratch'
 alias pscr='vim ~/util/scratch +1 -c ":r!xclip -o";cat ~/util/scratch |xclip -i'
