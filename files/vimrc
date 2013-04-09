@@ -47,6 +47,8 @@ let vimclojure#NailgunClient = "/usr/local/bin/ng"
 let g:ctrlp_open_new_file = 't'
 let g:ctrlp_open_multi = '1t'
 
+let g:indentLine_color_term = 239
+
 " sysshep.vim
 "  set your systemshepherd username and password
 " Let's read this from something I don't check in :)
