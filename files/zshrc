@@ -45,6 +45,7 @@ export PIV_WEB_ID=1807
 export PIV_DASH_ID=6396
 export LESS="-erX"
 export JAVA_HOME=$(/usr/libexec/java_home)
+export TMUX_POWERLINE_SEG_WEATHER_LOCATION="12793014"
 
 alias grep="grep --color=auto"
 alias scr='vim ~/util/scratch'
@@ -96,6 +97,7 @@ export API_WORKSPACE=code/svn
 
 export NODE_PATH=/usr/local/lib/node_modules
 
+export RUBY_GC_MALLOC_LIMIT=90000000
 
 # Load the theme
 source "/Users/ewc/.zsh/themes/clean.zsh-theme"
