@@ -1,3 +1,4 @@
+set shell=/bin/sh
 set nocompatible
 filetype off
 
@@ -26,22 +27,6 @@ set clipboard=unnamed
 
 " PowerLine
 let g:Powerline_symbols = 'fancy'
-" Slime
-let g:slime_target = "tmux"
-" vimclojure
-let vimclojure#HighlightBuiltins=1
-let vimclojure#ParenRainbow=1
-let vimclojure#WantNailgun = 1
-let vimclojure#NailgunClient = "/usr/local/bin/ng"
-autocmd BufWritePre *.clj call vimclojure#EvalFile()
-autocmd InsertLeave *.clj :wa | call vimclojure#EvalFile()
-
-let vimclojure#HighlightBuiltins=1
-let vimclojure#HighlightContrib=1
-let vimclojure#DynamicHighlighting=1
-let vimclojure#ParenRainbow=1
-let vimclojure#WantNailgun = 1
-let vimclojure#NailgunClient = "/usr/local/bin/ng"
 
 " ctrlp
 let g:ctrlp_open_new_file = 't'
@@ -148,10 +133,6 @@ au! BufRead,BufNewFile *.json set filetype=json
 
 
 set list listchars=tab:\ \ ,trail:·,extends:>,precedes:<
-"autocmd FileWritePre * :call TrimWhiteSpace()
-"autocmd FileAppendPre * :call TrimWhiteSpace()
-"autocmd FilterWritePre * :call TrimWhiteSpace()
-"autocmd BufWritePre * :call TrimWhiteSpace()
 
 map <F2> :call TrimWhiteSpace()<CR>
 map! <F2> :call TrimWhiteSpace()<CR>
