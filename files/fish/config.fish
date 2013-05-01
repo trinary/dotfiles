@@ -50,8 +50,9 @@ function _is_git_dirty
 end
 
 function fish_prompt
-  set -l blue (set_color blue)
-  set -l green (set_color green)
+  set -l blue   (set_color blue)
+  set -l green  (set_color green)
+  set -l red    (set_color red)
   set -l normal (set_color normal)
 
   set -l arrow "λ"
@@ -62,7 +63,10 @@ function fish_prompt
     set git_info ":$git_info"
 
     if [ (_is_git_dirty) ]
-      set -l dirty "*"
+      set -l dirty $red(echo " ✗")
+      set git_info "$git_info$dirty"
+    else
+      set -l dirty $green(echo " ✔")
       set git_info "$git_info$dirty"
     end
   end
