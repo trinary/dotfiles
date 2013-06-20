@@ -40,7 +40,13 @@ set -gx PATH /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin $PA
 set -gx PATH /Users/ewc/bin/android-sdk-mac_x86/tools /Developer/usr/bin $PATH
 set -gx PATH /Users/ewc/Code/crawl/crawl-ref/source $PATH
 set -gx PATH /Users/ewc/.rbenv/bin /Users/ewc/.rbenv/shims $PATH
-set -gx PATH /opt/local/bin /Users/ewc/bin /opt/local/lib/postgresql86/bin /usr/local/mysql/bin /usr/local/bin $PATH
+set -gx PATH /opt/local/bin /Users/ewc/bin /opt/local/lib/postgresql86/bin /usr/local/mysql/bin /usr/local/bin /usr/local/share/npm/bin $PATH
+
+set -gx RUBY_GC_MALLOC_LIMIT          1000000000
+set -gx RUBY_HEAP_MIN_SLOTS           1000000
+set -gx RUBY_HEAP_SLOTS_INCREMENT     1000000
+set -gx RUBY_HEAP_SLOTS_GROWTH_FACTOR 1
+set -gx RUBY_HEAP_FREE_MIN            500000
 
 function _git_branch_name
   echo (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
