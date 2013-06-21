@@ -1,4 +1,4 @@
 function servethis
-  python -m SimpleHTTPServer
+  python -m SimpleHTTPServer $argv
 end
 
