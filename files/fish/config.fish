@@ -38,7 +38,7 @@ set -gx PATH /usr/X11/bin /Users/ewc/Code/incanter/bin $PATH
 set -gx PATH /bin /usr/bin /sbin /usr/sbin /usr/local/sbin /usr/local/pgsql/bin /usr/local/git/bin $PATH
 set -gx PATH /opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin $PATH
 set -gx PATH /Users/ewc/bin/android-sdk-mac_x86/tools /Developer/usr/bin $PATH
-set -gx PATH /Users/ewc/Code/crawl/crawl-ref/source $PATH
+set -gx PATH /Users/ewc/Code/crawl/crawl-ref/source /usr/local/share/python $PATH
 set -gx PATH /Users/ewc/.rbenv/bin /Users/ewc/.rbenv/shims $PATH
 set -gx PATH /opt/local/bin /Users/ewc/bin /opt/local/lib/postgresql86/bin /usr/local/mysql/bin /usr/local/bin /usr/local/share/npm/bin $PATH
 

@@ -10,6 +10,8 @@ set t_Co=256
 set number
 syntax on
 
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
 set hidden
 let mapleader=","
 set history=1000
@@ -67,8 +69,6 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 set fillchars=vert:│
 " Status bar
-set laststatus=2
-
 set scrolloff=3
 set autoindent
 set showmode
