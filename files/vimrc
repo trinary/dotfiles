@@ -138,3 +138,9 @@ map <F2> :call TrimWhiteSpace()<CR>
 map! <F2> :call TrimWhiteSpace()<CR>
 
 set background=dark
+
+" rainbow braces
+au VimEnter * RainbowParenthesesToggle
+au Syntax clj,cljs,cljx RainbowParenthesesLoadRound
+au Syntax clj,cljs,cljx RainbowParenthesesLoadSquare
+au Syntax clj,cljs,cljx RainbowParenthesesLoadBraces

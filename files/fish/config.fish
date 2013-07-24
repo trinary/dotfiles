@@ -31,7 +31,6 @@ set -gx CDPATH /Users/ewc/Code .
 
 set -gx EDITOR vim
 
-set -gx GOROOT /usr/local/Cellar/go/1.1beta2/
 set -gx GOPATH /usr/local/lib/go
 
 set -gx PATH /usr/X11/bin /Users/ewc/Code/incanter/bin $PATH
