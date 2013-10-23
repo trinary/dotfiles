@@ -26,6 +26,7 @@ alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 alias be='bundle exec'
 alias vi=vim
+# alias vim=/usr/local/Cellar/macvim/7.4-71/MacVim.app/Contents/MacOS/Vim
 
 set -gx CDPATH /Users/ewc/Code .
 

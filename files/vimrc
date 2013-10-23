@@ -81,7 +81,7 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-" set relativenumber
+set relativenumber
 set noundofile
 set wrap
 set directory=~/.vim/tmp/
@@ -89,7 +89,7 @@ set backupdir=~/.vim/tmp
 set shortmess=atI
 
 let g:solarized_termcolors=256
-colorscheme Tomorrow-Night
+colorscheme Tomorrow-Night-Eighties
 
 " don't clobber buffer if used in term
 set t_ti= t_te=
@@ -120,6 +120,8 @@ nnoremap q? ?
 xnoremap q? ?
 autocmd CmdwinEnter * nnoremap <buffer> <ESC> :q<CR>
 
+nnoremap <leader>a :Ag 
+
 inoremap <C-C> #<C-R>=system('/Users/ewc/bin/color_picker')<CR>
 
 " Removes trailing spaces
@@ -128,14 +130,14 @@ function TrimWhiteSpace()
   ''
 endfunction
 
+nnoremap <leader>tr :call TrimWhiteSpace()<CR>
+
 au BufNewFile,BufRead *.less set filetype=css
 au! BufRead,BufNewFile *.json set filetype=json
 
 
 set list listchars=tab:\ \ ,trail:·,extends:>,precedes:<
 
-map <F2> :call TrimWhiteSpace()<CR>
-map! <F2> :call TrimWhiteSpace()<CR>
 
 set background=dark
 
