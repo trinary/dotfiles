@@ -3,3 +3,4 @@ tags
 .swo
 jferris-*.gemspec
 *.scratch.*
+.DS_Store
