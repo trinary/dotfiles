@@ -41,6 +41,7 @@ set -gx PATH /Users/ewc/bin/android-sdk-mac_x86/tools /Developer/usr/bin $PATH
 set -gx PATH /Users/ewc/Code/crawl/crawl-ref/source /usr/local/share/python $PATH
 set -gx PATH /Users/ewc/.rbenv/bin /Users/ewc/.rbenv/shims $PATH
 set -gx PATH /opt/local/bin /Users/ewc/bin /opt/local/lib/postgresql86/bin /usr/local/mysql/bin /usr/local/bin /usr/local/share/npm/bin $PATH
+set -gx PATH /Users/ewc/anaconda/bin /usr/local/lib/go/bin $PATH
 
 set -gx RUBY_GC_MALLOC_LIMIT          1000000000
 set -gx RUBY_HEAP_MIN_SLOTS           1000000
