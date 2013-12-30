@@ -1,4 +1,5 @@
 files/dbshell
 files/fish/fish_history
 files/fish/fish_read_history
+files/fish/generated_completions
 files/fish/fishd*
