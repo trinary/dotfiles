@@ -44,7 +44,6 @@ set -gx PATH /opt/local/bin /Users/ewc/bin /opt/local/lib/postgresql86/bin /usr/
 set -gx PATH /Users/ewc/anaconda/bin /usr/local/lib/go/bin $PATH
 
 set -gx RUBY_GC_MALLOC_LIMIT          1000000000
-set -gx RUBY_HEAP_MIN_SLOTS           1000000
 set -gx RUBY_HEAP_SLOTS_INCREMENT     1000000
 set -gx RUBY_HEAP_SLOTS_GROWTH_FACTOR 1
 set -gx RUBY_HEAP_FREE_MIN            500000
